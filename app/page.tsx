@@ -1,133 +1,27 @@
-import Image from "next/image";
-import Link from "next/link";
+import FAQs from "@/components/FAQs";
+import Feature from "@/components/Feature";
+import Feature2 from "@/components/Feature2";
+import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
+import LogoCloud from "@/components/LogoCloud";
+import Navbar from "@/components/Navbar";
+import Pricing from "@/components/Pricing";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
-      <nav className="w-full fixed top-0 left-0 bg-white z-50 grid place-items-center py-[14px]">
-        <div className="container px-[22px] sm:px-0 xl:w-[1280px] flex flex-row justify-between text-[#374151]">
-          <div className="flex flex-row items-center gap-[40px]">
-            <div className="Logo">
-              <Image src="/logo.png" alt="" width={32} height={32}></Image>
-            </div>
-            <ul className="NavLinks hidden sm:flex flex-row items-center gap-8">
-              <li className="leading-[24px] font-medium text-[16px] cursor-pointer">
-                <Link href="#Feature">Features</Link>
-              </li>
-              <li className="leading-[24px] font-medium text-[16px] cursor-pointer">
-                Resources
-              </li>
-              <li className="leading-[24px] font-medium text-[16px] cursor-pointer">
-                Enterprise
-              </li>
-              <li className="leading-[24px] font-medium text-[16px] cursor-pointer">
-                <Link href="#Pricing">Pricing</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="flex sm:hidden">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3 12H21M3 6H21M3 18H21"
-                stroke="#4B5563"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <div className="Registration hidden sm:flex flex-row items-center gap-8 ">
-            <Link
-              className="leading-[20px] font-medium text-[14px]"
-              href="/Login"
-            >
-              Log in
-            </Link>
-            <Link
-              className="bg-[#0072DE] text-white rounded-[8px] leading-[20px] font-medium text-[14px] px-[14px] py-[8px]"
-              href="/signUp"
-            >
-              Sign up
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
       <main className="flex xl:w-[1300px] flex-col items-center  py-[84px]">
-        <section className="Hero-section flex items-center flex-col bg-[#F0F8FF] bg-[url('/bg.png')] bg-center rounded-3xl xl:w-[1300px] xl:h-[1103px] pt-16">
-          <div className="badge bg-[#FFFFFF] rounded-[16px] size-fit border-[#E5E7EB] border-[1px] flex items-center gap-1 p-1 pr-[10px]  ">
-            <div className="bg-[#F9FAFB] rounded-[16px] border-[#E5E7EB] border-[1px] text-[#374151] font-medium text-[14px] leading-[20px] py-[2px] px-[14px]">
-              ✨ v2.1
-            </div>
-            <span className="text-[#374151] font-medium text-[14px] leading-[20px]">
-              Sublima UI v2.0 is out now!
-            </span>
-          </div>
-          <h1 className="mt-8 text-[#111827] text-[60px] leading-[72px] font-semibold xl:w-[768px] text-center">
-            Discover a <span className="text-[#0072DE]">new world</span> of
-            possibilities
-          </h1>
-          <p className="mt-[24px] w-[590px] text-[18px] text-[#4B5563] leading-[28px] text-center">
-            Empower your project with our comprehensive wireframe kits designed
-            to meet the needs of any platform
-          </p>
-          <div className="buttons pt-8 flex gap-6 items-center">
-            <Link
-              className="bg-[#0072DE] text-white rounded-[8px] leading-[24px] font-medium text-[16px] px-[20px] py-[12px]"
-              href="/signUp"
-            >
-              Get started
-            </Link>
-            <Link
-              className="leading-[24px] font-medium text-[16px] flex gap-2 text-[#374151]"
-              href="/Login"
-            >
-              <svg
-                width="21"
-                height="20"
-                viewBox="0 0 21 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.5001 18.3333C15.1025 18.3333 18.8334 14.6024 18.8334 10C18.8334 5.39763 15.1025 1.66667 10.5001 1.66667C5.89771 1.66667 2.16675 5.39763 2.16675 10C2.16675 14.6024 5.89771 18.3333 10.5001 18.3333Z"
-                  stroke="#374151"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M8.83342 6.66667L13.8334 10L8.83342 13.3333V6.66667Z"
-                  stroke="#374151"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              Watch video
-            </Link>
-          </div>
-          <div className="img pt-[67px] relative">
-            <Image src="/hero.png" alt="" width={1023} height={644.7} className="border-8px rounded-6 "/>
-            <Image src="/hero2.png" alt="" width={200} height={182.8} className="border-8px rounded-6 top-1/2 -left-[88px] translate-y-[-50%] absolute cursor-pointer"/>
-            <Image src="/hero3.png" alt="" width={240} height={94.3} className="border-8px rounded-6 top-[78.5%] -right-[40px] translate-y-[-50%] absolute cursor-pointer"/>
-          </div>
-        </section>
-        <section className="Logo-cloud" id="Logo-cloud"></section>
-        <section className="Feature" id="Feature"></section>
-        <section className="Feature2"></section>
-        <section className="Testimonials" id="Testimonials"></section>
-        <section className="Pricing" id="Pricing"></section>
-        <section className="FAQs" id="FAQs"></section>
+        <HeroSection />
+        <LogoCloud />
+        <Feature />
+        <Feature2 />
+        <Testimonials />
+        <Pricing />
+        <FAQs />
       </main>
-      <footer className="w-full grid place-items-center">
-        <div className="container xl:w-[1280px]"></div>
-      </footer>
+      <Footer />
     </div>
   );
 }
