@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       <Navbar />
-      <main className="flex xl:w-[1300px] flex-col items-center  py-[84px]">
+      <main className="flex xl:w-[1300px] px-4 xl:px-0 flex-col items-center  py-[84px]">
         <HeroSection />
         <LogoCloud />
         <Feature />

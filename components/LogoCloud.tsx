@@ -123,6 +123,7 @@ const logos = [
     ),
   },
 ];
+
 const LogoCloud = () => {
   return (
     <section
@@ -132,11 +133,11 @@ const LogoCloud = () => {
       <p className="text-[18px] leading-[28px] text-[#4B5563] text-center">
         Trusted by the world’s most innovative teams
       </p>
-      <div className="flex flex-row gap-8 items-center">
+      <div className="flex flex-row gap-8 items-center justify-center xl:flex-nowrap flex-wrap">
         {logos.map((logo) => (
           <div
             key={logo.name}
-            className="log w-[176px] flex flex-row items-center justify-center gap-2 cursor-pointer"
+            className="log sm:w-[176px]   flex flex-row items-center justify-center gap-2 cursor-pointer"
           >
             {logo.svg}
             <p className="text-[24px] leading-8 font-extrabold">{logo.name}</p>

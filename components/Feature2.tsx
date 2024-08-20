@@ -1,6 +1,7 @@
 import React from "react";
 import Info from "./Info";
 import Image from "next/image";
+import CorrectIcon from "@/public/features2.svg";
 const cards: any[] = [
   {
     title: "Real time data",
@@ -35,9 +36,7 @@ const cards: any[] = [
 ];
 const Feature2 = () => {
   return (
-    <section
-      className="Feature  flex flex-col gap-16 justify-center items-center py-[96px]"
-    >
+    <section className="Feature  flex flex-col gap-16 justify-center items-center py-[96px]">
       <Info
         subTitle="Features"
         title="Everything you need for scalability"
@@ -49,33 +48,19 @@ const Feature2 = () => {
           alt=""
           width={1023}
           height={644.7}
-          className="border-8px rounded-6 "
+          className="border-8px rounded-6 w-full"
         />
       </div>
-      <div className="grid grid-cols-3 gap-8 w-[1216px] pt-8 pb-12">
+      <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 justify-center items-stretch gap-8 xl:w-[1216px] pt-8 pb-12">
         {cards.map((card) => (
-          <div
-            key={card.title}
-            className=" flex flex-row gap-6"
-          >
-            <div className="svg size-6 grid place-items-center">
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 22 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.5 8L9.5 14L7 11.5M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z"
-                stroke="#0072DE"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            </div>
-
+          <div key={card.title} className=" flex flex-row gap-6">
+            <Image
+              src={CorrectIcon}
+              alt="correct"
+              className="h-fit"
+              width={24}
+              height={24}
+            />
 
             <div className="content flex flex-col gap-2">
               <p className="text-[#111827] font-semibold text-[20px] leading-[30px]">
